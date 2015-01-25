@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html ng-app="MyController">
+<head>
+	<meta charset="utf-8">
+	<title>指令复用</title>
+</head>
+<body>
+	<div ng-controller="MyCtrl">
+		<loader loadDataFn="loadData()">滑动加载</loader>
+	</div>
+	<div ng-controller="MyCtr2">
+		<loader loadDataFn="loadData2()">滑动加载2</loader>
+	</div>
+</body>
+<script src="js/angular-1.3.0.js"></script>
+<script src="js/directive-controller.js"></script>
+</html>

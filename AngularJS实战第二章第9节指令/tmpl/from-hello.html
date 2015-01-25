@@ -1,0 +1,115 @@
+      <div class="row registerForm">
+        <div class="col-xs-6 col-md-6 col-xs-offset-2 col-md-offset-2 registerFormWrap">
+
+            <form  class="form-horizontal" role="form" id="registerForm">
+                <div class="form-group">
+                  <div class="col-xs-5 col-md-5 col-xs-offset-4 col-md-offset-4">
+                    <h2>账户注册</h2>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="txtPhone" class="control-label col-xs-4 col-md-4">手机号码：</label>
+                  <div class="col-xs-5 col-md-5">
+                    <input type="text" id="txtPhone" name="txtPhone" class="form-control" placeholder="手机号码">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="col-xs-5 col-md-5 col-xs-offset-4 col-md-offset-4">
+                    <button class="btn btn-success" type="button" id="btnSms">发送验证码</button>
+                     <small class="smsTips">发送成功,<span id="timeOut">60</span>秒后可重新发送</small>
+                  </div>
+
+                </div>
+
+                <div class="form-group">
+                  <label for="txtPhoneVerificationCode" class="control-label col-xs-4 col-md-4">手机验证码：</label>
+                  <div class="col-xs-5 col-md-5">
+                    <input type="text" class="form-control" id="txtPhoneVerificationCode" name="txtPhoneVerificationCode" placeholder="手机验证码">
+                  </div>
+                </div>
+
+                <div class="form-group">
+
+                  <label for="txtPwd" class="control-label col-xs-4 col-md-4">密码：</label>
+                  <div class="col-xs-5 col-md-5">
+                    <input type="password" class="form-control" id="txtPwd" name="txtPwd" placeholder="输入密码">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="txtPwd2" class="control-label col-xs-4 col-md-4">确认密码：</label>
+                  <div class="col-xs-5 col-md-5">
+                    <input type="password" class="form-control" id="txtPwd2" name="txtPwd2" placeholder="再次输入密码">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="txtUserName" class="control-label col-xs-4 col-md-4">设置登录名：</label>
+                  <div class="col-xs-5 col-md-5">
+                    <input id="txtUserName" type="text" class="form-control" name="txtUserName" placeholder="用户名">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="txtEmail" class="control-label col-xs-4 col-md-4">(可选)邮箱：</label>
+                  <div class="col-xs-5 col-md-5">
+                    <input type="text" class="form-control" placeholder="输入邮箱" name="txtEmail" id="txtEmail">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="" class="control-label col-xs-4 col-md-4">设置安全问题：</label>
+                  <div class="col-xs-5 col-md-5">
+                    <div class="dropdown">
+                      <button class="btn btn-default dropdown-toggle" type="button" id="dropdownSafeQuestion" data-toggle="dropdown">你身份证的最后的3位？</button>
+                      <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownSafeQuestion">
+                        <li class="presentation"><a  role="menuitem" tabindex="01">你身份证的最后的3位？</a></li>
+                        <li class="presentation"><a  role="menuitem" tabindex="02">您的幸运数字？</a></li>
+                        <li class="presentation"><a  role="menuitem" tabindex="03">您就读的中学？</a></li>
+                        <li class="presentation"><a  role="menuitem" tabindex="04">您最喜欢的一部电影？</a></li>
+                        <li class="presentation"><a  role="menuitem" tabindex="05">您心目中的英雄？</a></li>
+                        <li class="presentation"><a  role="menuitem" tabindex="06">您的启蒙老师的名字？</a></li>
+                      </ul>
+                    </div> <!--end dropdown-->
+                  </div> <!--end col-xs-10 col-md-10-->
+
+                </div>
+
+                <div class="form-group">
+                  <label for="txtAnswer" class="control-label  col-xs-4 col-md-4">答案：</label>
+                  <div class="col-xs-5 col-md-5">
+                    <input type="text" class="form-control" id="txtAnswer" name="txtAnswer" placeholder="输入答案">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="txtVerificationCode" class="control-label  col-xs-4 col-md-4">输入验证码：</label>
+                  <div class="col-xs-5 col-md-5">
+                    <input type="text" class="form-control" placeholder="输入验证码：" name="txtVerificationCode" id="txtVerificationCode">
+                  </div>
+                </div>
+                <!-- 验证码 -->
+                <div class="form-group">
+                  <div class="col-xs-5 col-md-5 col-xs-offset-4 col-md-offset-4">
+                      <!-- <canvas id="myCanvas" class="canvas" height="46px" width="117px"></canvas> -->
+                      <div class="canvas" id="myCanvas"></div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <!-- <div class="col-xs- col-md-2"></div> -->
+                  <div class=" col-xs-offset-4 col-md-offset-4 col-xs-5 col-md-5">
+                    <div class="checkbox">
+                      <label>
+                        <input type="checkbox" id="formPayAgreement" checked="true" name="formPayAgreement">同意<a target="_blank" href="agree.html">《港华支付用户服务协议》</a>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="col-xs-5 col-md-5 col-xs-offset-4 col-md-offset-4">
+                    <button class="btn btn-success btn-validator" id="btnRegister" type="button">立即注册</button>
+                  </div>
+                </div>
+            </form>
+        </div>
+      </div>
